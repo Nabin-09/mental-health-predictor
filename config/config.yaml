@@ -1,0 +1,32 @@
+# Model Configuration
+model:
+  vocab_size: 10000
+  embedding_dim: 300
+  hidden_dim: 128
+  num_layers: 2
+  num_classes: 4
+  dropout: 0.3
+  max_seq_length: 128
+
+# Training Configuration  
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  num_epochs: 25
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  early_stopping_patience: 7
+
+# Data Configuration
+data:
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  min_word_freq: 2
+  
+# Paths
+paths:
+  data_dir: "data/"
+  models_dir: "models/"
+  results_dir: "results/"
+  logs_dir: "results/logs/"
